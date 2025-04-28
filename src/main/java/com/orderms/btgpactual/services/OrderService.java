@@ -35,7 +35,8 @@ public class OrderService {
     }
 
     private static List<OrderItem> getOrderItens(OrderCreatedEvent event) {
-        return event.itens().stream().map(i -> new OrderItem(i.product(), i.quantity(), i.price()))
+        return event.itens().stream()
+                .map(i -> new OrderItem(i.product(), i.quantity(), i.price()))
                 .toList();
     }
 }
