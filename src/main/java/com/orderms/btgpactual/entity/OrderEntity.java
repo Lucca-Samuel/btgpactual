@@ -23,8 +23,8 @@ public class OrderEntity {
     @MongoId
     private Long orderID;
 
-    @Indexed(name = "customer_id_index")
-    private Long customerId;
+    @Indexed(name = "custumer_id_index")
+    private Long custumerId;
 
     @Field(targetType = FieldType.DECIMAL128)
     private BigDecimal total;
